@@ -1,0 +1,92 @@
+1. Por que o Git é considerado um sistema de controle de versão distribuído? 
+ Resposta: Porque cada desenvolvedor possui uma cópia completa do repositório, incluindo todo o histórico de versões. Isso permite trabalhar offline, fazer commits locais e sincronizar com o repositório remoto quando necessário.
+
+2. Qual a diferença entre working directory, staging area e repository? 
+ Resposta:   Working Directory: é a pasta onde você edita os arquivos. Reflete o estado atual do projeto no seu sistema de arquivos.
+Staging Area: é uma área intermediária onde você prepara os arquivos para o próximo commit usando git add.
+Repository: é onde os commits são armazenados permanentemente. Pode ser local (em .git) ou remoto.
+
+
+3. Para que serve o comando git clone ? 
+ Resposta: Serve para copiar um repositório remoto para sua máquina local.
+
+4. Onde estão implementados fisicamente working directory, staging area e repository ? 
+Resposta: Working Directory: nos arquivos e pastas visíveis do projeto.
+Staging Area: dentro da pasta oculta.
+Repository: também na pasta que contém os objetos, referências e histórico.
+
+ 5. Quais os estados de um arquivo no repositório do git ? 
+ Resposta: untracked, tracked, unmodifield, modified e staged.
+
+6. Explique as possíveis transições de estado de um arquivo no repositório do git ? 
+ Resposta:  
+•	Untracked → Staged: ao usar git add em um novo arquivo.
+•	Unmodified → Modified: ao editar um arquivo monitorado.
+•	Modified → Staged: ao usar git add após modificar.
+•	Staged → Unmodified: após git commit, as alterações são registradas.
+•	Staged → Modified: se o arquivo for editado novamente antes do commit.
+•	Tracked → Untracked: se o arquivo for removido do controle com git rm --cached.
+
+
+
+
+
+Pergunta: Qual foi a mensagem exibida após o comando git init e o que ela significa na prática?  Resposta:
+Initialized empty Git repository in C:/Users/Quantum Engenharia/aula-git/.git/
+
+
+
+
+1- Qual o estado do arquivo antes e depois do git add ? 
+Resposta: antes untracked, depois staged. 
+
+2- O que significa o estado untracked e tracked ? 
+Resposta: Untracked: o Git ainda não está rastreando o arquivo, ele foi criado mas nunca foi adicionado
+Tracked: o Git está rastreando o arquivo, ele já foi adicionado ao repositório e o Git monitora suas alterações.
+
+3. Qual o objetivo do git commit ? 
+Resposta: registra permanentemente as alterações que estavam na área de stage
+
+4. Qual o estado do arquivo após o git commit ? 
+ Resposta: [master (root-commit) b93b4ef] Primeiro commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 arquivo.txt
+
+
+
+
+1. O que o comando git diff mostra? 
+Resposta: ele exibe o que foi modificado, mas ainda não foi adicionado ao stage.
+warning: in the working copy of 'arquivo.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/arquivo.txt b/arquivo.txt
+index 4ecc55c..376418e 100644
+--- a/arquivo.txt
++++ b/arquivo.txt
+@@ -1 +1,2 @@
+ Primeiro arquivo
++Nova linha
+
+
+2. Qual commit está atualmente apontado por HEAD? 
+Resposta: b93b4ef (HEAD -> master) Primeiro commit
+
+
+
+
+1. Como verificar em qual branch você está? 
+Resposta: com comando git branch 
+
+2. O que acontece se você rodar git merge nova-feature estando na branch principal? Resposta: Already up to date.
+
+
+
+4. Encerramento e Discussão 
+Qual etapa foi mais difícil? 
+A 3 etapa
+
+Como o Git ajuda na colaboração? 
+Com o controle de versões, branches para trabalho paralelo, integrações com outras plataformas...
+
+Que diferença faz ter um repositório remoto? 
+Compartilhamento com a equipe, backup, integrações...
+
